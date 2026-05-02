@@ -1,0 +1,14 @@
+{
+    // Suppress VS Code's built-in CSS validator since Tailwind handles validation.
+    // This eliminates the "Unknown at rule @tailwind" false-positive warnings.
+    "css.validate": false,
+    "scss.validate": false,
+    // Tell Tailwind IntelliSense where to find Tailwind directives
+    "tailwindCSS.includeLanguages": {
+        "typescriptreact": "html"
+    },
+    "tailwindCSS.experimental.classRegex": [],
+    // Use the project's local TypeScript version for accurate type checking
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+}

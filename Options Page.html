@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<title>Options &amp; API Configuration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2b6cee",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 dark:border-b-slate-800 px-10 py-3">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-100">
+<div class="size-6 text-primary material-symbols-outlined">translate</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">DocTranslate</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 bg-slate-200 dark:bg-slate-800" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzy3Y_0oxoyndhl6iIZLnSsKjDUTejouVZiQoVuEXfYL2F4z_g9X74uPSmLal_4UHIxNgXOzgNyfM4rgnYiRMq6MvDVpG7aQF1wn_cXSGg8gXOk78JZiI-_SbBJ_u9GbEZ4lOlyDBjvZKSXiloVXjSmMeKm3iVH6__UC8BT3qshDsXneV6h8G2DboVaMOju4pLvwf7ie6P5mZ7xz3KxVLDwSMQJj5sduupWqmPHDZmZhx4-gBJ2nfFT7lJRxU2my_zHO5JHBIAK7oW");'></div>
+</div>
+</header>
+<div class="flex h-full min-h-[700px] flex-row gap-8 py-8 px-10">
+<!-- Sidebar -->
+<div class="w-64 flex flex-col gap-4 flex-shrink-0">
+<div class="flex gap-3 mb-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 bg-slate-200 dark:bg-slate-800" data-alt="Extension logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkyFG0MT9hoJ-r8_CNISjPh0AbKCRTKZA0Q_NjADuAkzpR0Nk3lCQkPuSGfsUB-lypia21hK3qfpgNPjR_HgQGJ0Qv2gk-sPzAEnBy5T2ItgdKyTrTY7rFyGn0GtxbYv8LRd2B5VU39jhKhXS3NBaV4PDNO4SUOw9YWC4OKJjC0kuSGHUetxIASHt4_rc39WjDyPcyywmImWgZzpbfVgje1ZwwRrniDcgtAseXi97q-uiiDYwTLBeer7F8wGsl7BlXhV5jMhoSpq74");'></div>
+<div class="flex flex-col justify-center">
+<h1 class="text-base font-medium leading-normal text-slate-900 dark:text-slate-100">DocTranslate</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Browser Extension</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">settings</span>
+<p class="text-sm font-medium leading-normal text-slate-700 dark:text-slate-300">General</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-primary">key</span>
+<p class="text-sm font-medium leading-normal text-primary">API Keys</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">menu_book</span>
+<p class="text-sm font-medium leading-normal text-slate-700 dark:text-slate-300">Glossary</p>
+</a>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 flex flex-col gap-10">
+<!-- API Config Section -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="tracking-light text-2xl font-bold leading-tight text-slate-900 dark:text-slate-100">API Configuration</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Configure your API keys for translation services.</p>
+</div>
+<div class="flex flex-col gap-6 max-w-[480px]">
+<label class="flex flex-col gap-2">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Google Cloud API Key</span>
+<div class="flex w-full items-stretch rounded-lg shadow-sm">
+<input class="form-input flex w-full min-w-0 flex-1 rounded-l-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary h-12 placeholder:text-slate-400 p-4 pr-2 text-base" type="password" value="••••••••••••••••••••••••"/>
+<button class="flex items-center justify-center px-4 border border-l-0 border-slate-300 dark:border-slate-700 bg-white dark:bg-background-dark rounded-r-lg text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors focus:outline-none focus:ring-1 focus:ring-primary">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">OpenAI API Key</span>
+<div class="flex w-full items-stretch rounded-lg shadow-sm">
+<input class="form-input flex w-full min-w-0 flex-1 rounded-l-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary h-12 placeholder:text-slate-400 p-4 pr-2 text-base" placeholder="sk-..." type="password"/>
+<button class="flex items-center justify-center px-4 border border-l-0 border-slate-300 dark:border-slate-700 bg-white dark:bg-background-dark rounded-r-lg text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors focus:outline-none focus:ring-1 focus:ring-primary">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</label>
+<div class="flex justify-end pt-2">
+<button class="bg-primary hover:bg-primary/90 text-white font-medium py-2 px-6 rounded-lg shadow-sm transition-colors text-sm">Save Changes</button>
+</div>
+</div>
+</section>
+<!-- Glossary Section -->
+<section class="flex flex-col gap-6 pt-8 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-2">
+<h2 class="tracking-light text-2xl font-bold leading-tight text-slate-900 dark:text-slate-100">Exclusion Glossary</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Terms that should not be translated (e.g. variable names, specific technical jargon).</p>
+</div>
+<div class="flex flex-col gap-4 max-w-[480px]">
+<div class="flex w-full items-stretch rounded-lg shadow-sm">
+<input class="form-input flex w-full min-w-0 flex-1 rounded-l-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary h-12 placeholder:text-slate-400 p-4 text-base" placeholder="Type a term and press Enter..." type="text"/>
+<button class="flex items-center justify-center px-6 bg-slate-100 dark:bg-slate-800 border border-l-0 border-slate-300 dark:border-slate-700 rounded-r-lg text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-sm">
+                        Add
+                      </button>
+</div>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                        useEffect
+                        <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 focus:outline-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                        props
+                        <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 focus:outline-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                        useState
+                        <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 focus:outline-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

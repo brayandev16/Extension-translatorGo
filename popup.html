@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doc Translator Extension</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3B82F6",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0F172A",
+                        "surface-dark": "#0F172A",
+                        "surface-darker": "#1E293B",
+                        "border-dark": "#334155",
+                        "text-muted": "#94a3b8"
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[400px] rounded-xl border border-border-dark bg-surface-dark shadow-2xl overflow-hidden flex flex-col">
+<header class="flex items-center gap-3 border-b border-border-dark px-6 py-4 bg-surface-darker">
+<span class="material-symbols-outlined text-primary text-2xl">translate</span>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-white">Doc Translator</h2>
+</header>
+<div class="p-6 flex flex-col gap-6">
+<div class="flex items-center justify-between gap-4 rounded-xl border border-border-dark bg-surface-darker p-5">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold leading-tight text-white">Enable Extension</p>
+<p class="text-text-muted text-sm font-normal leading-normal">Toggle translation on or off</p>
+</div>
+<label class="relative flex h-[32px] w-[56px] cursor-pointer items-center rounded-full border-none bg-background-dark p-1 transition-colors has-[:checked]:bg-primary border border-border-dark">
+<div class="h-[24px] w-[24px] rounded-full bg-white shadow-sm transition-all has-[:checked]:translate-x-[24px]"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+<div class="flex flex-col gap-3">
+<h2 class="text-base font-bold leading-tight tracking-[-0.015em] text-white">Engine Selector</h2>
+<div class="flex h-12 w-full rounded-xl bg-surface-darker p-1 border border-border-dark">
+<label class="relative flex h-full flex-1 cursor-pointer items-center justify-center rounded-lg transition-colors has-[:checked]:bg-background-dark has-[:checked]:shadow-sm">
+<input class="peer invisible absolute w-0" name="engine" type="radio" value="Google"/>
+<div class="flex items-center gap-2 text-text-muted peer-checked:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">g_translate</span>
+<span class="text-sm font-medium">Google</span>
+</div>
+</label>
+<label class="relative flex h-full flex-1 cursor-pointer items-center justify-center rounded-lg transition-colors has-[:checked]:bg-background-dark has-[:checked]:shadow-sm border border-transparent has-[:checked]:border-border-dark">
+<input checked="" class="peer invisible absolute w-0" name="engine" type="radio" value="AI"/>
+<div class="flex items-center gap-2 text-text-muted peer-checked:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+<span class="text-sm font-medium">AI</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="mt-auto border-t border-border-dark bg-surface-darker px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-background-dark text-primary border border-border-dark">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<p class="text-sm font-medium text-white">Connected to OpenAI</p>
+</div>
+<div class="relative flex h-3 w-3 items-center justify-center">
+<span class="absolute inline-flex h-full w-full rounded-full bg-primary opacity-25"></span>
+<span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+</div>
+</div>
+</div>
+</div>
+</body></html>

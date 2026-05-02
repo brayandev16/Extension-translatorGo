@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elegant Floating Translation Tooltip</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-8">
+<!-- Mock Content to show context -->
+<div class="max-w-4xl w-full bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8 relative">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-6">Understanding React Hooks</h1>
+<p class="text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
+            Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+        </p>
+<div class="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg font-mono text-sm text-slate-800 dark:text-slate-200 mb-4">
+<span class="text-purple-600 dark:text-purple-400">import</span> React, { useState } <span class="text-purple-600 dark:text-purple-400">from</span> 'react';<br/><br/>
+<span class="text-blue-600 dark:text-blue-400">function</span> <span class="text-yellow-600 dark:text-yellow-400">Example</span>() {<br/>
+              <span class="text-slate-500 dark:text-slate-400">// Declare a new state variable, which we'll call "count"</span><br/>
+              <span class="text-purple-600 dark:text-purple-400">const</span> [count, setCount] = <span class="text-blue-600 dark:text-blue-400">useState</span>(0);<br/>
+            }
+        </div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            You can build your own Hooks to <span class="bg-primary/30 dark:bg-primary/40 rounded px-1 relative inline-block group cursor-pointer">share reusable stateful logic</span></p><div class="absolute w-2 h-2 bg-slate-800/90 dark:bg-slate-800 border-t border-l border-slate-700/50 transform rotate-45 -top-[13px] left-1/2 -translate-x-1/2 z-20"></div> between different components.
+        <p></p>
+<!-- The Tooltip Component -->
+<div class="absolute top-[360px] left-[320px] z-10 w-[380px]">
+<div class="relative flex flex-col bg-slate-800/90 dark:bg-slate-800 backdrop-blur-md rounded-xl border border-slate-700/50 shadow-2xl overflow-hidden">
+<!-- Tooltip Content -->
+<div class="p-4 border-b border-slate-700/50">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-sm">translate</span>
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">English to Spanish</span>
+</div>
+<p class="text-slate-100 font-display text-base leading-snug">
+                            compartir lógica con estado reutilizable
+                        </p>
+</div>
+</div>
+<!-- Tooltip Footer -->
+<div class="flex items-center justify-between px-4 py-2.5 bg-slate-900/50 dark:bg-slate-900/60 group/footer">
+<div class="text-xs text-slate-400 font-medium truncate max-w-[240px] group-hover/footer:text-slate-200 transition-colors duration-200" title="Original: share reusable stateful logic">
+<span class="text-slate-500">Orig:</span> share reusable stateful logic
+                    </div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-all focus:outline-none focus:ring-2 focus:ring-primary/50" title="Copy translation">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-all focus:outline-none focus:ring-2 focus:ring-primary/50" title="More options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

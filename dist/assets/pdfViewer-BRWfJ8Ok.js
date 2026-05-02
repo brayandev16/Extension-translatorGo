@@ -1,0 +1,14 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/client-C4xAqAfa.js","assets/jsx-runtime-BOFgHXMK.js","assets/PdfViewer-BFZudyE2.js","assets/modulepreload-polyfill-B5Qt9EMX.js","assets/index.tsx-CoCf7PBj.js","assets/storage-D9zGGJ5f.js","assets/pdf_viewer-BKMPNOLU.css"])))=>i.map(i=>d[i]);
+import"./modulepreload-polyfill-B5Qt9EMX.js";import{j as p}from"./jsx-runtime-BOFgHXMK.js";const E="modulepreload",v=function(e){return"/"+e},u={},d=function(o,n,c){let l=Promise.resolve();if(n&&n.length>0){document.getElementsByTagName("link");const t=document.querySelector("meta[property=csp-nonce]"),r=(t==null?void 0:t.nonce)||(t==null?void 0:t.getAttribute("nonce"));l=Promise.allSettled(n.map(i=>{if(i=v(i),i in u)return;u[i]=!0;const a=i.endsWith(".css"),h=a?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${i}"]${h}`))return;const s=document.createElement("link");if(s.rel=a?"stylesheet":E,a||(s.as="script"),s.crossOrigin="",s.href=i,r&&s.setAttribute("nonce",r),document.head.appendChild(s),a)return new Promise((f,_)=>{s.addEventListener("load",f),s.addEventListener("error",()=>_(new Error(`Unable to preload CSS for ${i}`)))})}))}function m(t){const r=new Event("vite:preloadError",{cancelable:!0});if(r.payload=t,window.dispatchEvent(r),!r.defaultPrevented)throw t}return l.then(t=>{for(const r of t||[])r.status==="rejected"&&m(r.reason);return o().catch(m)})};window.addEventListener("error",e=>{var o;document.body.innerHTML+=`<div style="position:fixed;top:0;left:0;z-index:9999;background:red;color:white;padding:20px;font-family:monospace;width:100%;">
+        <h3>Global Error:</h3>
+        <p>${e.message}</p>
+        <pre>${(o=e.error)==null?void 0:o.stack}</pre>
+    </div>`});window.addEventListener("unhandledrejection",e=>{var o,n;document.body.innerHTML+=`<div style="position:fixed;top:0;left:0;z-index:9999;background:orange;color:white;padding:20px;font-family:monospace;width:100%;">
+        <h3>Unhandled Promise:</h3>
+        <p>${((o=e.reason)==null?void 0:o.message)??e.reason}</p>
+        <pre>${(n=e.reason)==null?void 0:n.stack}</pre>
+    </div>`});Promise.all([d(()=>import("./jsx-runtime-BOFgHXMK.js").then(e=>e.i),[]),d(()=>import("./client-C4xAqAfa.js").then(e=>e.c),__vite__mapDeps([0,1])),d(()=>import("./PdfViewer-BFZudyE2.js"),__vite__mapDeps([2,1,3])),d(()=>import("./index.tsx-CoCf7PBj.js"),__vite__mapDeps([4,1,0,5])),d(()=>Promise.resolve({}),__vite__mapDeps([6]))]).then(([e,o,{PdfViewer:n}])=>{const c=document.getElementById("root");o.createRoot(c).render(p.jsx(e.default.StrictMode,{children:p.jsx(n,{})}))}).catch(e=>{document.body.innerHTML+=`<div style="position:fixed;top:0;left:0;z-index:9999;background:blue;color:white;padding:20px;font-family:monospace;width:100%;">
+        <h3>Dynamic Import Error:</h3>
+        <p>${e.message}</p>
+        <pre>${e.stack}</pre>
+    </div>`});export{d as _};
